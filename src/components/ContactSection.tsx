@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const socials = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/paridhi-talwar/" },
   { name: "GitHub", url: "https://github.com/paridhitalwar" },
-  { name: "Medium", url: "https://medium.com/@paridhitalwar" },
+  { name: "Medium", url: "https://medium.com/@pari.talwar" },
 ];
 
 export default function ContactSection() {
