@@ -13,13 +13,13 @@ const projects = [
   {
     title: "Brewing Analytics",
     desc: "Spark + GCP pipeline for brewing quality prediction.",
-    href: "https://github.com/paridhitalwar/brewing-analytics",
+    href: "https://github.com/paridhitalwar/Brewery-Operations-and-Market-Analysis",
     img: "/brewing.jpg",
   },
   {
     title: "Animal Intrusion Detection",
     desc: "Mask-RCNN real-time detection with 87% accuracy.",
-    href: "https://github.com/paridhitalwar/animal-intrusion-detection",
+    href: "https://github.com/paridhitalwar/Animal_Intrusion_Detection_System",
     img: "/animal-detect.png",
   },
 ];

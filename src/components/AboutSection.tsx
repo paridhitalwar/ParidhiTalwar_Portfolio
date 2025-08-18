@@ -46,7 +46,7 @@ export default function AboutSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <p>
-            I’m Paridhi Talwar — a software engineer and data scientist who
+            I’m Paridhi Talwar, a software engineer and data scientist who
             thrives at the intersection of AI innovation and scalable
             engineering.
           </p>
@@ -58,7 +58,7 @@ export default function AboutSection() {
           </p>
           <p>
             As the founding engineer at <strong>Olis</strong>, I’ve been
-            steering both the technical vision and the execution—architecting
+            steering both the technical vision and the execution, architecting
             RAG pipelines, enabling multi-platform delivery, and ensuring our
             solutions balance performance, privacy, and impact.
           </p>
