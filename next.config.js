@@ -13,11 +13,10 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
-  // Generate static HTML for all pages
-  generateBuildId: async () => 'build',
   // Disable image optimization API (not needed for static exports)
   images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
+    unoptimized: true,
   },
+  // Ensure static export
+  trailingSlash: true,
 };

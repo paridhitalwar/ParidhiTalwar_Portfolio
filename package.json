@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "if exist .next rmdir /s /q .next && if exist out rmdir /s /q out && if exist docs rmdir /s /q docs",
-    "predeploy": "npm run clean && npm run build",
-    "deploy": "if not exist docs mkdir docs && xcopy /E /I /Y out\\* docs\\ && echo paridhitalwar.github.io/ParidhiTalwar_Portfolio > docs/CNAME && echo. > docs/.nojekyll && git add . && git commit -m \"Deploy to GitHub Pages\" && git push"
+    "predeploy": "npm run clean && next build",
+    "deploy": "npm run predeploy && git add . && git commit -m \"Deploy to GitHub Pages\" && git push"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
