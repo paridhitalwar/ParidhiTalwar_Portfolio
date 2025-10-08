@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export -o docs",
-    "postexport": "echo 'paridhitalwar.github.io/ParidhiTalwar_portfolio' > docs/CNAME",
-    "deploy": "npm run export && npm run postexport && git add . && git commit -m 'Deploy to GitHub Pages' && git push"
+    "export": "next build",
+    "postexport": "echo 'paridhitalwar.github.io/ParidhiTalwar_Portfolio' > docs/CNAME && echo '' > docs/.nojekyll",
+    "predeploy": "npm run export && npm run postexport",
+    "deploy": "git add . && git commit -m 'Deploy to GitHub Pages' && git push"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
