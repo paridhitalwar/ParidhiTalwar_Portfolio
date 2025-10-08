@@ -4,10 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center gap-10 mx-6 sm:mx-12 py-16" // increased padding + spacing
+      className="min-h-screen flex flex-col items-center justify-center text-center gap-6 mx-4 sm:mx-8 py-12 max-w-6xl mx-auto px-4" // Adjusted padding and max-width
     >
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
@@ -35,11 +37,12 @@ export default function Hero() {
         className="w-50 h-50 sm:w-55 sm:h-55 rounded-full overflow-hidden border-4 border-white/20 shadow-xl" // bigger avatar
       >
         <Image
-          src="/Avatar.png"
+          src={`${basePath}/Avatar.png`}
           alt="Avatar"
           width={288}
           height={288}
-          className="object-cover"
+          className="object-cover w-full h-full"
+          priority
         />
       </motion.div>
 

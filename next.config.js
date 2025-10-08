@@ -1,18 +1,23 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const repositoryName = 'ParidhiTalwar_Portfolio';
+const basePath = isProd ? `/${repositoryName}` : '';
 
 const nextConfig = {
   output: 'export',
-  distDir: 'out',
-  basePath: isProd ? `/${repositoryName}` : '',
-  assetPrefix: isProd ? `/${repositoryName}/` : '',
+  distDir: 'docs',
+  basePath: basePath,
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
-  // Optional: Add this if you have any API routes that need to be handled
-  skipTrailingSlashRedirect: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
+  // Generate static HTML for all pages
+  generateBuildId: async () => 'build',
+  // Disable image optimization API (not needed for static exports)
+  images: {
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
 };
-
-module.exports = nextConfig;
