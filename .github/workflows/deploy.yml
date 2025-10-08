@@ -36,7 +36,7 @@ jobs:
           # Create docs directory if it doesn't exist
           mkdir -p docs
           # Copy build output to docs directory
-          cp -r .next/out/* docs/
+          cp -r out/* docs/
           
       - name: Setup Pages
         uses: actions/configure-pages@v4
